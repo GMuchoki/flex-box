@@ -55,6 +55,13 @@ function alignStart() {
   setDescription((prev => `${prev}\nAlignment set to: START (flex-start)`)(document.getElementById('description').textContent));
 }
 
+function alignCenter() {
+  const container = document.querySelector('.container');
+  container.style.justifyContent = 'center';
+  setActiveAlignButton('Center');
+  setDescription((prev => `${prev}\nAlignment set to: CENTER (center)`)(document.getElementById('description').textContent));
+}
+
 function alignEnd() {
   const container = document.querySelector('.container');
   container.style.justifyContent = 'flex-end';
@@ -62,14 +69,31 @@ function alignEnd() {
   setDescription((prev => `${prev}\nAlignment set to: END (flex-end)`)(document.getElementById('description').textContent));
 }
 
+function alignSpaceAround() {
+  const container = document.querySelector('.container');
+  container.style.justifyContent = 'space-around';
+  setActiveAlignButton('Space Around');
+  setDescription((prev => `${prev}\nAlignment set to: SPACE-AROUND (space-around)`)(document.getElementById('description').textContent));
+}
+
+function alignSpaceBetween() {
+  const container = document.querySelector('.container');
+  container.style.justifyContent = 'space-between';
+  setActiveAlignButton('Space Between');
+  setDescription((prev => `${prev}\nAlignment set to: SPACE-BETWEEN (space-between)`)(document.getElementById('description').textContent));
+}
+
 function setActiveAlignButton(label) {
   const buttons = document.querySelectorAll('#alignment-buttons button');
   buttons.forEach(btn => {
-    if (btn.textContent === label) {
+    if (btn.textContent.trim().toLowerCase() === label.toLowerCase()) {
       btn.classList.add('active');
     } else {
       btn.classList.remove('active');
     }
   });
 }
+
+
+
 
