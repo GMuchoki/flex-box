@@ -5,13 +5,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <h1>Flexbox Dashboard</h1>
+  <h3>Flex Direction</h3>
+
   <button onclick="rowDisp()">Row</button>
   <button onclick="columnDisp()">Column</button>
   <button onclick="rowReverse()">Row-reverse</button>
   <button onclick="columnReverse()">Column reverse</button>
+
   <p id="description" style="white-space: pre-line; font-weight: bold; margin-top: 10px;"></p>
 
-  <h3>Flex Direction</h3>
   <div class="container">
     <div class="items">#1 Venus upset over Pluto being declassified as a
     planet. </div>
@@ -20,6 +24,19 @@
     <div class="items">#3 Can you hurt a rock's feelings? Read on to
     find out more. </div>
   </div>
+
+  <h3>Choose where to group flex items:</h3>
+
+  <button onclick="alignStart()">Start</button>
+  <button onclick="alignEnd()">End</button>
+
+  <div class="demo-container" id="align-demo">
+    <div class="demo-item">1</div>
+    <div class="demo-item">2</div>
+    <div class="demo-item">3</div>
+  </div>
+
+
   <script src="script.js"></script>
 </body>
 </html>

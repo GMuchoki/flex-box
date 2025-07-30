@@ -56,3 +56,25 @@
   border: solid 2px #806868;
   height: 500px;
 }
+
+/* Container for the flex alignment demo */
+.demo-container {
+  display: flex;
+  background-color: #e0f7fa;
+  border: 2px solid #00796b;
+  padding: 10px;
+  margin-top: 20px;
+  height: 80px;
+  justify-content: flex-start; /* default */
+  align-items: center;
+}
+
+/* Flex items inside the demo */
+.demo-item {
+  background-color: #4dd0e1;
+  color: #004d40;
+  padding: 10px 15px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
